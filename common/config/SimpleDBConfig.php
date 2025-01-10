@@ -22,5 +22,5 @@ class SimpleDBConfig
      * 
      */
 
-    protected static $password = "";
+    protected static $passwd = "";  // Change from $password to $passwd
 }
