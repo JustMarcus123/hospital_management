@@ -19,12 +19,18 @@ const CreateUser = () => {
 
   //handle form submission
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    axios.post(
-      "http://localhost/hospitalmanagement/hospital_management/backend/api.php"
-    );
-    console.log(form);
+
+    try {
+      const response = await axios.post(
+        "http://localhost/hospitalmanagement/hospital_management/backend/api.php",
+        form
+      );
+      console.log("Response:", response.data);
+    } catch (error) {
+      console.log("error:", error);
+    }
   };
 
   return (
