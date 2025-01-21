@@ -26,7 +26,7 @@ function App() {
           </div>
         </nav>
         <Routes>
-          <Route index path="/" element={<ListUser />} />
+          <Route index element={<ListUser />} />
           <Route path="user/create" element={<CreateUser />} />
         </Routes>
       </BrowserRouter>
